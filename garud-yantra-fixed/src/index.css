@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dashMarch {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes sonarPing {
+  0% {
+    r: 6;
+    opacity: 0.9;
+  }
+  75% {
+    r: 28;
+    opacity: 0.15;
+  }
+  100% {
+    r: 34;
+    opacity: 0;
+  }
+}
+
+.radar-sweep-cone {
+  transform-origin: center;
+  animation: radarSweep 16s linear infinite;
+}
+
+.patrol-trail-animated {
+  stroke-dasharray: 6, 6;
+  animation: dashMarch 10s linear infinite;
+}
+
+.heat-blob-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulseGlow 7s ease-in-out infinite alternate;
+}
+
+.radar-sonar-ring {
+  animation: sonarPing 4.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+/* Floor Plan Zone Hover Styles */
+.station-zone {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.station-zone:hover {
+  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.45));
+}

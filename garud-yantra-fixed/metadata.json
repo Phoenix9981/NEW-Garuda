@@ -1,0 +1,6 @@
+{
+  "name": "GARUD YANTRA - Smart Railway Security System",
+  "description": "SIH 2026 prototype for real-time detection of explosives and narcotics across Indian Railways using multi-sensor fusion, edge AI, quadruped robotics, and tamper-evident logging.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
